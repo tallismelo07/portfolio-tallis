@@ -2,55 +2,58 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center; /* Garante centralização horizontal */
   gap: 20px;
   text-align: center;
   height: 100dvh;
   min-height: 500px;
+  padding: 0 20px; /* Adiciona espaçamento interno lateral */
+  box-sizing: border-box; /* Inclui padding nas dimensões totais */
+}
 
-  .hero {
-    max-width: 200px;
-  }
+.hero {
+  max-width: 200px;
+}
 
-  span {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
+span {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
 
-    a {
-      margin: 0;
+span a {
+  margin: 0;
+}
 
-      img {
-        width: 30px;
-      }
-    }
-  }
+span a img {
+  width: 30px;
+}
 
-  a {
-    width: fit-content;
-    align-self: center;
-  }
+a {
+  width: fit-content;
+  align-self: center;
+}
 
-  button {
-    background-color: var(--btn-color);
-    color: var(--btn-text-color);
-    border: none;
-    border-radius: 20px;
-    width: 126px;
-    height: 50px;
-    font-size: 15px;
-    font-weight: bold;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-  }
+button {
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 20px;
+  width: 126px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+}
 
-  button:hover {
-    transform: scale(1.05);
-  }
+button:hover {
+  transform: scale(1.05);
+}
 
-  button:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-  }
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 .colorModeContainer {
@@ -59,45 +62,43 @@
 
 .colorMode {
   position: absolute;
-  right: 0;
+  right: 10px; /* Adicionado para evitar corte próximo à borda */
+  top: 10px; /* Mantém o ícone no canto superior */
   width: 25px;
-}
-
-.colorMode:hover {
   cursor: pointer;
 }
 
 .description {
   max-width: 40ch;
+  padding: 0 10px; /* Garante espaçamento interno lateral */
+  line-height: 1.5; /* Melhora legibilidade */
 }
 
 .info {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 0 10px; /* Espaçamento interno para evitar corte */
 }
 
-@media (width >= 800px) {
+/* Responsividade */
+@media (min-width: 800px) {
   .container {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-evenly;
+    padding: 0 40px; /* Mais espaçamento lateral em telas maiores */
+  }
 
-    .hero {
-      max-width: 350px;
-      width: 350px;
-    }
+  .hero {
+    max-width: 350px;
+    width: 350px;
   }
 }
 
-@media (width >= 1400px) {
-  .container {
-    .hero {
-      max-width: 400px;
-      width: 400px;
-    }
+@media (min-width: 1400px) {
+  .hero {
+    max-width: 400px;
+    width: 400px;
   }
 }
-
-
-

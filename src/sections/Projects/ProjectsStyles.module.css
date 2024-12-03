@@ -46,12 +46,3 @@
   
 }
 
-
-@media (width >= 1400px) {
-  .container {
-    .hero {
-      max-width: 400px;
-      width: 400px;
-    }
-  }
-}
